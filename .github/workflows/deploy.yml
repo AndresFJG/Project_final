@@ -9,7 +9,21 @@ permissions:
   contents: write
 
 jobs:
+validate-code:
+  runs-on: ubuntu-latest
+  steps:
+    - name: checkout del codigo
+      uses: actions/checkout@v3
+
+    - name: Validar el código
+      uses: Cyber-Jak3/html5-validator-action@v1
+      with:
+        files: 'index.html'
+
+
+
   deploy:
+    needs: validate-code
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +31,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v3
 
       - name: Subir a GitHub Pages
         uses: actions/upload-pages-artifact@v2
