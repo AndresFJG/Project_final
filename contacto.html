@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="contacto.css">
+  <title>Contacto</title>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#formacion">Formación</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<div class="container py-5 mt-5">
+  <h2 class="text-center mb-4 contact-header">Contáctanos</h2>
+  <div class="row g-4 align-items-center">
+    <div class="col-md-6">
+      <div class="contact-form bg-white p-4">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-6 d-flex flex-column">
+      <div class="contact-info mb-3 p-3">
+        <h5>Información de contacto</h5>
+        <p><strong>Ubicación:</strong> Potreritos, Antioquia, Colombia</p>
+        <p><strong>Teléfono:</strong> +57 3126458807</p>
+        <p><strong>Email:</strong> losmagos@soy.sena.edu.co</p>
+      </div>
+      <div class="image-container">
+        <img src="https://i.pinimg.com/originals/93/2d/b4/932db49e33fcc1ecd85cd5564b8bf935.jpg" alt="Imagen de contacto" class="image-side">
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2024 Desarrolladores SENA - Todos los derechos reservados NAM</p>
+  <p>
+    <a href="#" style="color: white; text-decoration: none;">GitHub</a> | 
+    <a href="#" style="color: white; text-decoration: none;">LinkedIn</a> | 
+    <a href="#" style="color: white; text-decoration: none;">Portafolio</a>
+  </p>
+</footer>
+
+</body>
+</html>
