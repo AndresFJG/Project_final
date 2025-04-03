@@ -8,3 +8,4 @@ Nicolas Gomez, Miguel Angel Zapata, Andres Felipe Jaramillo
 para ejecutar el proyecto solo es neceario hacer el git clone del proyecto y abrir el index.html
 el cual ya está funcional con todas las vistas
 
+Link de la web:https://andresfjg.github.io/Project_final/
