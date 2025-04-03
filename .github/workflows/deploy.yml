@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Validar y Publicar página
 
 on:
   push:
@@ -11,28 +11,32 @@ permissions:
   id-token: write
 
 jobs:
-  validate-code:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout del código
-        uses: actions/checkout@v3
-
-      - name: Validar HTML
-        uses: Cyb3r-Jak3/html5validator-action@main
-        with:
-          path: 'index.html'
-
-  deploy:
-    needs: validate-code
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar el repositorio
         uses: actions/checkout@v3
 
-      - name: Setup Pages
+      - name: Instalar Java y html5validator
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y openjdk-17-jre python3-pip
+          pip install html5validator
+
+      - name: Validar HTML
+        run: html5validator --root .
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Subir a GitHub Pages
+      - name: Subir archivos
         uses: actions/upload-pages-artifact@v2
         with:
           path: '.'
