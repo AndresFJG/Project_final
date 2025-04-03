@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-validate-code:
+  validate-code:
   runs-on: ubuntu-latest
   steps:
     - name: checkout del codigo
